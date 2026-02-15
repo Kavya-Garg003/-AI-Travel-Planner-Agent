@@ -7,13 +7,12 @@ from datetime import datetime, timedelta
 # =========================
 # LOAD ENV VARIABLES
 # =========================
-load_dotenv()
 
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
-AMADEUS_CLIENT_ID = os.getenv("AMADEUS_CLIENT_ID")
-AMADEUS_CLIENT_SECRET = os.getenv("AMADEUS_CLIENT_SECRET")
-DEFAULT_ORIGIN = os.getenv("DEFAULT_ORIGIN", "DEL")
+OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
+OPENWEATHER_API_KEY = st.secrets["OPENWEATHER_API_KEY"]
+AMADEUS_CLIENT_ID = st.secrets["AMADEUS_CLIENT_ID"]
+AMADEUS_CLIENT_SECRET = st.secrets["AMADEUS_CLIENT_SECRET"]
+DEFAULT_ORIGIN = st.secrets["DEFAULT_ORIGIN"]
 
 # =========================
 # LLM USING OPENROUTER
